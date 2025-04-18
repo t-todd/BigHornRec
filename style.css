@@ -1,0 +1,104 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1, h2 {
+  color: #800000;  /* Maroon color */
+}
+
+h1 {
+  font-size: 2.5em;
+}
+
+h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+ul li {
+  margin: 10px 0;
+}
+
+blockquote {
+  font-style: italic;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-left: 5px solid #800000;
+  margin: 20px 0;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #333;
+  color: white;
+}
+
+/* Section Styles */
+header {
+  background-color: #800000; /* Maroon background */
+  color: white;
+  text-align: center;
+  padding: 50px 0;
+}
+
+header .cta-button {
+  padding: 10px 20px;
+  background-color: #f1c40f; /* Gold color */
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+header .cta-button:hover {
+  background-color: #e67e22;
+}
+
+/* Content Sections */
+section {
+  margin-bottom: 40px;
+}
+
+section h2 {
+  margin-top: 20px;
+}
+
+section .cta {
+  text-align: center;
+  padding: 40px;
+  background-color: #f1c40f;
+  color: #333;
+}
+
+section .cta a {
+  padding: 15px 30px;
+  background-color: #800000;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+section .cta a:hover {
+  background-color: #c0392b;
+}
