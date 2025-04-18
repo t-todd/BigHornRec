@@ -1,6 +1,3 @@
-/* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap');
-
 /* Global Styles */
 body {
   font-family: 'Open Sans', sans-serif;
@@ -114,6 +111,14 @@ footer {
   color: white;
 }
 
+/* Add margin and center the content */
+.container {
+  width: 100%;
+  max-width: 1200px; /* Set maximum width */
+  margin: 0 auto; /* Center content horizontally */
+  padding: 0 20px; /* Add padding for left and right margins */
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   h1 {
@@ -122,10 +127,6 @@ footer {
 
   h2 {
     font-size: 2em;
-  }
-
-  .container {
-    width: 90%;
   }
 
   .cta-button {
@@ -146,6 +147,11 @@ footer {
   .cta-button {
     font-size: 1em;
     padding: 12px 25px;
+  }
+
+  .container {
+    width: 100%;
+    padding: 0 10px; /* Less padding on smaller devices */
   }
 }
 
