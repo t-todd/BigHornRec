@@ -1,7 +1,7 @@
 /* Global Styles */
 body {
-  font-family: 'Open Sans', sans-serif;
-  background-color: #f4f4f4;
+  font-family: 'Roboto', sans-serif;
+  background-color: #fff;
   color: #333;
   line-height: 1.8;
   margin: 0;
@@ -9,18 +9,18 @@ body {
 }
 
 h1, h2 {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Oswald', sans-serif; /* Updated font for section headings */
   font-weight: bold;
-  color: #800000; /* Maroon */
+  color: #771C24; /* Maroon color */
   margin-bottom: 10px;
 }
 
 h1 {
-  font-size: 3em; /* Larger size for main header */
+  font-size: 3em;
 }
 
 h2 {
-  font-size: 2.5em; /* Slightly larger subheadings */
+  font-size: 2.5em; /* Slightly larger subheading */
 }
 
 p {
@@ -38,35 +38,95 @@ ul li {
 }
 
 blockquote {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3em;
   font-style: italic;
   padding: 25px;
   background-color: #f9f9f9;
-  border-left: 5px solid #800000;
+  border-left: 5px solid #771C24;
   margin: 20px 0;
-  border-radius: 8px;
+  border-radius: 0px;
 }
 
-/* Section Backgrounds */
+blockquote .author {
+  font-family: 'Roboto', sans-serif;
+  font-size: .8em;
+}
+
+/* Title Section: Left-aligned, white background, Oswald Bold */
+.title-section {
+  background-color: #fff;
+  padding: 20px 0;
+}
+
+#title-section {
+  margin: 0px;
+}
+
+.title {
+  font-family: 'Oswald', sans-serif; /* Using Oswald Bold */
+  font-weight: 700; /* Bold */
+  color: #333; /* Dark Grey */
+  font-size: 1.7em; /* Adjust the font size to fit */
+  text-align: left; /* Left-align the title */
+  margin: 0; /* Remove default margin */
+}
+
+/* Headline Section */
 header {
-  background: linear-gradient(135deg, #800000, #f1c40f); /* Maroon to Gold gradient */
+  background-color: #771C24; /* Maroon background */
   color: white;
-  padding: 50px 0;
   text-align: center;
+  line-height: 1.4;
 }
 
-header .cta-button {
-  padding: 12px 25px;
-  background-color: #f1c40f; /* Gold color */
+header h1 {
+  font-family: 'Oswald', sans-serif;
+  font-weight: bold;
   color: white;
+  padding: 0px;
+  margin: 0px;
+}
+
+header .container {
+  padding: 10px 0;
+}
+
+/* Full-width Image Section */
+.image-section {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-image: url('images/BIGHORN RENDER 7.jpg'); /* Set your image as a background */
+  background-size: cover; /* Ensure the image covers the entire section */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent image repetition */
+  height: 500px; /* Or any height you want for the section */
+}
+
+
+/* CTA Section */
+.cta-section {
+  background-color: #fff; /* White background */
+  padding: 0px 0; /* Add padding around the button */
+  text-align: center;
+  margin-top: 80px;
+}
+
+.cta-section .cta-button {
+  padding: 15px 30px;
+  background-color: #F7C325; /* Gold color */
+  color: #771C24;
   text-decoration: none;
-  border-radius: 8px;
+  border-radius: 0px;
   font-size: 1.1em;
   font-weight: bold;
   transition: background-color 0.3s ease, transform 0.3s ease;
+  /* border: 1px solid #771C24;  1px maroon border */
 }
 
-header .cta-button:hover {
-  background-color: #e67e22; /* Darker gold */
+.cta-section .cta-button:hover {
+  background-color: #dea702; /* darker gold */
   transform: translateY(-3px); /* Slight lift effect */
 }
 
@@ -75,12 +135,7 @@ section {
   padding: 40px 0;
   margin-bottom: 40px;
   background-color: #fff;
-  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-}
-
-section:nth-child(odd) {
-  background-color: #f9f9f9;
+  border-radius: 0px;
 }
 
 section .cta {
@@ -92,7 +147,7 @@ section .cta {
 
 section .cta a {
   padding: 15px 30px;
-  background-color: #800000;
+  background-color: #771C24;
   color: white;
   text-decoration: none;
   border-radius: 5px;
@@ -104,6 +159,121 @@ section .cta a:hover {
   transform: translateY(-5px); /* Lift effect */
 }
 
+/* Vision Section: Maroon background, white text */
+.vision {
+  background-color: #771C24; /* Maroon background */
+  color: white; /* White text */
+  padding: 40px 0;
+  margin-bottom: 40px;
+  padding-left: 250px; /* Indent text inside the Vision section */
+  padding-right: 100px; /* Optional: add a little space on the right for balance */
+}
+
+.vision h2, .vision p, .vision ul {
+  color: white; /* Ensure all text inside this section is white */
+}
+
+.vision ul {
+  padding-left: 20px;
+}
+
+.vision ul li {
+  margin-bottom: 10px;
+}
+
+/* Responsive Design for Vision Section: Adjust indentation for smaller screens */
+@media (max-width: 1024px) {
+  .vision {
+    padding-left: 100px; /* Reduced padding for smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .vision {
+    padding-left: 30px; /* Even less indentation for tablet/mobile screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .vision {
+    padding-left: 15px; /* Minimal indentation for smaller mobile screens */
+  }
+}
+
+
+
+/* Features Section: Two-column layout with image on the right */
+.features {
+  padding: 40px 0;
+  margin-bottom: 40px;
+  background-color: #fff;
+}
+
+.features-content {
+  display: flex; /* Flexbox for side-by-side layout */
+  justify-content: space-between; /* Ensures space between text and image */
+  align-items: stretch; /* Make both the text and image containers stretch to the same height */
+}
+
+.features-text {
+  width: 40%; /* Text takes up 40% of the section */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Vertically center text inside the container */
+  text-align: left; /* Keep the text left-aligned */
+}
+
+.features-image {
+  width: 60%; /* Image takes up 60% of the section */
+  text-align: right; /* Align the image to the right */
+  display: flex;
+  justify-content: center; /* Center the image horizontally */
+  align-items: center; /* Vertically center the image inside the container */
+}
+
+.features-image img {
+  width: 100%; /* Ensure the image takes full width of its container */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 8px; /* Optional: add border-radius for rounded corners */
+  object-fit: cover; /* Ensure the image covers the section without distortion */
+  display: block; /* Remove inline-block space */
+}
+
+/* Fix for the unordered list (UL) on smaller screens */
+.features-text ul {
+  padding-left: 20px; /* Ensure padding for list items */
+  list-style-position: inside; /* This ensures bullets stay inside the container */
+}
+
+.features-text ul li {
+  margin-bottom: 10px;
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 1024px) {
+  .features-content {
+    flex-direction: column; /* Stack the content vertically on medium screens */
+    align-items: flex-start; /* Align items to the start (left) on smaller screens */
+    text-align: left; /* Left-align text */
+  }
+
+  .features-text {
+    width: 100%; /* Full width for text */
+    margin-bottom: 20px; /* Space between text and image */
+  }
+
+  .features-image {
+    width: 100%; /* Full width for the image */
+  }
+
+  .features-image img {
+    width: 100%; /* Make image 100% width for smaller screens */
+  }
+}
+
+
+/*Footer*/
+
 footer {
   text-align: center;
   padding: 20px;
@@ -114,9 +284,9 @@ footer {
 /* Add margin and center the content */
 .container {
   width: 100%;
-  max-width: 1200px; /* Set maximum width */
-  margin: 0 auto; /* Center content horizontally */
-  padding: 0 20px; /* Add padding for left and right margins */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 /* Responsive Design */
@@ -163,6 +333,5 @@ html {
 img {
   max-width: 100%;
   height: auto;
-  border-radius: 15px;
   margin-top: 20px;
 }
