@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main  # Deploys on push to the main branch
+      - main  # Trigger deployment on push to the main branch
 
 jobs:
   deploy:
@@ -21,7 +21,7 @@ jobs:
       - name: Create gh-pages branch (if not exists)
         run: |
           git branch -M gh-pages  # Ensure we're pushing to the gh-pages branch
-          git remote set-url origin https://${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
 
       - name: Force commit an empty commit if nothing has changed
         run: |
