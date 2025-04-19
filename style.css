@@ -384,6 +384,166 @@ section .cta a:hover {
   padding: 0 20px;
 }
 
+
+
+/* FAQ Section */
+.faq-section {
+  background-color: #fff; /* White background */
+  padding: 40px 0;
+  margin-bottom: 40px;
+}
+
+.faq-section h2 {
+  font-family: 'Oswald', sans-serif;
+  font-weight: bold;
+  color: #771C24; /* Maroon color for the heading */
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.faq-item {
+  margin-bottom: 20px;
+}
+
+.faq-item h3 {
+  font-family: 'Oswald', sans-serif;
+  font-weight: bold;
+  color: #771C24;
+  font-size: 1.6em;
+  margin-bottom: 10px;
+}
+
+.faq-item p {
+  font-size: 1.1em;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .faq-section {
+    padding: 20px 0;
+  }
+
+  .faq-item h3 {
+    font-size: 1.4em;
+  }
+
+  .faq-item p {
+    font-size: 1em;
+  }
+}
+
+
+
+/* Call to Action Section (Join Us: Help Bring This Vision to Life) */
+.cta {
+  background-color: #771C24; /* Maroon background */
+  color: #fff; /* White font */
+  padding: 40px 0;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.cta h2 {
+  font-family: 'Oswald', sans-serif;
+  font-weight: bold;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #fff; /* White font */
+}
+
+.cta .cta-button {
+  padding: 15px 30px;
+  background-color: #F7C325; /* Gold color for the button */
+  color: #771C24; /* Maroon font for the button text */
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 1.1em;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta .cta-button:hover {
+  background-color: #dea702; /* Darker gold */
+  transform: translateY(-3px); /* Slight lift effect */
+}
+
+/* Ensure it's responsive */
+@media (max-width: 768px) {
+  .cta h2 {
+    font-size: 2em; /* Reduce font size on smaller screens */
+  }
+
+  .cta .cta-button {
+    padding: 12px 25px;
+    font-size: 1em;
+  }
+}
+
+
+/* Two Column Section */
+.two-column-section {
+  background-color: #fff; /* White background */
+  padding: 40px 0;
+  margin-bottom: 40px;
+}
+
+.two-column-content {
+  display: flex; /* Flexbox for side-by-side layout */
+  justify-content: space-between; /* Ensure space between columns */
+  align-items: flex-start; /* Align content at the top */
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.column {
+  width: 48%; /* Each column takes up 48% of the section's width */
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.column h3 {
+  font-family: 'Oswald', sans-serif;
+  font-weight: bold;
+  color: #771C24; /* Maroon color for headings */
+  font-size: 1.8em;
+  margin-bottom: 10px;
+}
+
+.column p {
+  font-size: 1.1em;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.column a {
+  color: #771C24;
+  text-decoration: none;
+}
+
+.column a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design: Stack columns on smaller screens */
+@media (max-width: 768px) {
+  .two-column-content {
+    flex-direction: column; /* Stack the content vertically on smaller screens */
+    text-align: center; /* Center-align text on smaller screens */
+  }
+
+  .column {
+    width: 100%; /* Full width for each column on smaller screens */
+    margin-bottom: 20px; /* Space between stacked columns */
+  }
+}
+
+
+
+
+
 /* Responsive Design */
 @media (max-width: 768px) {
   h1 {
