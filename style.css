@@ -165,41 +165,45 @@ section .cta a:hover {
   color: white; /* White text */
   padding: 40px 0;
   margin-bottom: 40px;
-  padding-left: 250px; /* Indent text inside the Vision section */
-  padding-right: 100px; /* Optional: add a little space on the right for balance */
 }
 
-.vision h2, .vision p, .vision ul {
-  color: white; /* Ensure all text inside this section is white */
+/* Flexbox layout for three columns */
+.vision-columns {
+  display: flex; /* Use flexbox for a three-column layout */
+  justify-content: space-between; /* Distribute the space evenly */
 }
 
-.vision ul {
-  padding-left: 20px;
+.vision-column-left, .vision-column-right {
+  width: 25%; /* Each side column takes up 25% */
+  /* Optional: you can add content or leave it empty */
 }
 
-.vision ul li {
-  margin-bottom: 10px;
+.vision-column-center {
+  width: 50%; /* Central column takes up 50% of the space */
+  padding: 0 20px; /* Add padding to the center column for better spacing */
 }
 
-/* Responsive Design for Vision Section: Adjust indentation for smaller screens */
+/* Ensure the content inside the center column is aligned correctly */
+.vision-column-center h2, .vision-column-center p, .vision-column-center ul {
+  color: white; /* Ensure all text inside the central column is white */
+}
+
+/* Responsive Design for smaller screens */
 @media (max-width: 1024px) {
-  .vision {
-    padding-left: 100px; /* Reduced padding for smaller screens */
+  .vision-columns {
+    flex-direction: column; /* Stack the columns vertically on medium screens */
+    text-align: center; /* Center-align text on smaller screens */
+  }
+
+  .vision-column-left, .vision-column-right {
+    width: 100%; /* Each column takes full width on smaller screens */
+    margin-bottom: 20px; /* Space between the columns */
+  }
+
+  .vision-column-center {
+    width: 100%; /* Central column takes full width on smaller screens */
   }
 }
-
-@media (max-width: 768px) {
-  .vision {
-    padding-left: 30px; /* Even less indentation for tablet/mobile screens */
-  }
-}
-
-@media (max-width: 480px) {
-  .vision {
-    padding-left: 15px; /* Minimal indentation for smaller mobile screens */
-  }
-}
-
 
 
 /* Features Section: Two-column layout with image on the right */
