@@ -20,13 +20,13 @@ jobs:
 
       - name: Create gh-pages branch (if not exists)
         run: |
-          git branch -M gh-pages  # Make sure we're pushing to the gh-pages branch
+          git branch -M gh-pages  # Ensure we're pushing to the gh-pages branch
           git remote set-url origin https://${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
 
-      - name: Push to gh-pages branch
+      - name: Force commit an empty commit if nothing has changed
         run: |
           git add .
-          git commit -m "Deploy to GitHub Pages"
-          git push --force origin gh-pages  # Push to gh-pages branch for GitHub Pages
+          git commit -m "Trigger GitHub Pages deploy" || echo "No changes to commit"
+          git push --force origin gh-pages  # Force push to gh-pages branch for GitHub Pages
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
