@@ -10,23 +10,28 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # Step 1: Checkout the code from the repository
       - name: Checkout code
         uses: actions/checkout@v2
 
+      # Step 2: Set up Git configuration for commits
       - name: Set up Git
         run: |
           git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"
 
+      # Step 3: Ensure we are on the gh-pages branch and set up the remote URL
       - name: Create gh-pages branch (if not exists)
         run: |
-          git branch -M gh-pages  # Ensure we're pushing to the gh-pages branch
+          git fetch
+          git checkout gh-pages || git checkout --orphan gh-pages  # Create gh-pages if it doesn't exist
           git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
 
-      - name: Force commit an empty commit if nothing has changed
+      # Step 4: Add changes (if any), commit, and push to gh-pages branch
+      - name: Commit and Push to GitHub Pages
         run: |
-          git add .
-          git commit -m "Trigger GitHub Pages deploy" || echo "No changes to commit"
+          git add -A  # Add all new/modified files
+          git commit -m "Deploy to GitHub Pages" || echo "No changes to commit"
           git push --force origin gh-pages  # Force push to gh-pages branch for GitHub Pages
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
