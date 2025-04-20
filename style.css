@@ -9,7 +9,7 @@ body {
 }
 
 h1, h2 {
-  font-family: 'Oswald', sans-serif; /* Updated font for section headings */
+  font-family: 'Oswald', sans-serif;
   font-weight: bold;
   color: #771C24; /* Maroon color */
   margin-bottom: 10px;
@@ -20,10 +20,10 @@ h1 {
 }
 
 h2 {
-  font-size: 2.5em; /* Slightly larger subheading */
+  font-size: 2.5em;
 }
 
-p {
+p, ul {
   font-size: 1.1em;
   line-height: 1.6;
   margin-bottom: 15px;
@@ -53,7 +53,7 @@ blockquote .author {
   font-size: .8em;
 }
 
-/* Title Section: Left-aligned, white background, Oswald Bold */
+/* Title Section */
 .title-section {
   background-color: #fff;
   padding: 20px 0;
@@ -64,12 +64,43 @@ blockquote .author {
 }
 
 .title {
-  font-family: 'Oswald', sans-serif; /* Using Oswald Bold */
-  font-weight: 700; /* Bold */
-  color: #333; /* Dark Grey */
-  font-size: 1.7em; /* Adjust the font size to fit */
-  text-align: left; /* Left-align the title */
-  margin: 0; /* Remove default margin */
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  color: #333;
+  font-size: 1.7em;
+  text-align: left;
+  margin: 0;
+}
+
+/* Global container */
+.container {
+  width: 100%;
+  max-width: 1200px; /* Maximum width for larger screens */
+  margin: 0 auto; /* Center the container */
+  padding: 0 20px; /* Add padding to the sides to prevent content from touching the edges */
+  box-sizing: border-box; /* Include padding and border in the element's width and height */
+}
+
+/* Section Styling */
+section {
+  width: 100%;
+  padding: 40px 0; /* Ensure sections have padding */
+  margin-bottom: 40px;
+  background-color: #fff;
+  box-sizing: border-box; /* Include padding in the width calculation */
+}
+
+/* To make sure no container exceeds section width */
+section .container {
+  padding: 0 20px; /* Apply the same padding inside sections */
+  box-sizing: border-box; /* Prevent the container from overflowing its section */
+}
+
+/* Fix for mobile/tablet view */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 10px; /* Less padding for small devices */
+  }
 }
 
 /* Headline Section */
@@ -97,42 +128,40 @@ header .container {
   width: 100%;
   margin: 0;
   padding: 0;
-  background-image: url('images/BIGHORN RENDER 7.jpg'); /* Set your image as a background */
-  background-size: cover; /* Ensure the image covers the entire section */
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Prevent image repetition */
-  height: 500px; /* Or any height you want for the section */
+  background-image: url('images/BIGHORN RENDER 7.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 500px;
 }
-
 
 /* CTA Section */
 .cta-section {
-  background-color: #fff; /* White background */
-  padding: 0px 0; /* Add padding around the button */
+  background-color: #fff;
+  padding: 0px 0;
   text-align: center;
   margin-top: 80px;
 }
 
 .cta-section .cta-button {
   padding: 15px 30px;
-  background-color: #F7C325; /* Gold color */
+  background-color: #F7C325;
   color: #771C24;
   text-decoration: none;
   border-radius: 0px;
   font-size: 1.1em;
   font-weight: bold;
   transition: background-color 0.3s ease, transform 0.3s ease;
-  /* border: 1px solid #771C24;  1px maroon border */
 }
 
 .cta-section .cta-button:hover {
-  background-color: #dea702; /* darker gold */
-  transform: translateY(-3px); /* Slight lift effect */
+  background-color: #dea702;
+  transform: translateY(-3px);
 }
 
 /* Section Padding & Content */
 section {
-  padding: 40px 0;
+  padding: 40px 0; /* Universal padding for all sections */
   margin-bottom: 40px;
   background-color: #fff;
   border-radius: 0px;
@@ -159,7 +188,36 @@ section .cta a:hover {
   transform: translateY(-5px); /* Lift effect */
 }
 
-/* Vision Section: Maroon background, white text */
+/* Why It Matters Section */
+.why-it-matters {
+  padding: 40px 0;
+  margin-bottom: 40px;
+}
+
+.why-it-matters h2 {
+  font-family: 'Oswald', sans-serif;
+  font-weight: bold;
+  color: #771C24;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.why-it-matters p {
+  font-size: 1.1em;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.why-it-matters ul {
+  text-align: left;
+  padding-left: 20px;
+}
+
+.why-it-matters ul li {
+  margin-bottom: 10px;
+}
+
+/* Vision Section */
 .vision {
   background-color: #771C24; /* Maroon background */
   color: white; /* White text */
@@ -167,118 +225,104 @@ section .cta a:hover {
   margin-bottom: 40px;
 }
 
-/* Flexbox layout for three columns */
+/* Flexbox Layout for Vision Columns */
 .vision-columns {
-  display: flex; /* Use flexbox for a three-column layout */
-  justify-content: space-between; /* Distribute the space evenly */
+  display: flex; /* Flexbox for layout */
+  justify-content: space-between; /* Distribute columns evenly */
+  align-items: stretch; /* Stretch the columns to the same height */
 }
 
 .vision-column-left, .vision-column-right {
-  width: 25%; /* Each side column takes up 25% */
-  /* Optional: you can add content or leave it empty */
+  flex: 0 0 25%; /* Left and right columns take up 25% of the width */
 }
 
 .vision-column-center {
-  width: 50%; /* Central column takes up 50% of the space */
-  padding: 0 20px; /* Add padding to the center column for better spacing */
+  flex: 0 0 50%; /* Center column takes up 50% of the width */
+  padding: 0 20px; /* Add some padding to the center column */
 }
 
-/* Ensure the content inside the center column is aligned correctly */
+/* Ensure the <ul> in the vision section is left-aligned */
+.vision ul {
+  text-align: left;
+  padding-left: 20px; /* Ensure the bullets are indented */
+}
+
+.vision ul li {
+  margin-bottom: 10px;
+}
+
 .vision-column-center h2, .vision-column-center p, .vision-column-center ul {
-  color: white; /* Ensure all text inside the central column is white */
+  color: white;
 }
 
 /* Responsive Design for smaller screens */
 @media (max-width: 1024px) {
   .vision-columns {
-    flex-direction: column; /* Stack the columns vertically on medium screens */
+    flex-direction: column; /* Stack the columns vertically on smaller screens */
     text-align: center; /* Center-align text on smaller screens */
   }
 
-  .vision-column-left, .vision-column-right {
-    width: 100%; /* Each column takes full width on smaller screens */
-    margin-bottom: 20px; /* Space between the columns */
+  .vision-column-left, .vision-column-right, .vision-column-center {
+    width: 100%; /* Full width for all columns on small screens */
+    margin-bottom: 20px; /* Add space between stacked columns */
   }
 
   .vision-column-center {
-    width: 100%; /* Central column takes full width on smaller screens */
+    padding: 0; /* Remove padding on small screens */
   }
 }
 
-
-/* Features Section: Two-column layout with image on the right */
-.features {
-  padding: 40px 0;
-  margin-bottom: 40px;
-  background-color: #fff;
-}
-
+/* Features Section */
 .features-content {
-  display: flex; /* Flexbox for side-by-side layout */
-  justify-content: space-between; /* Ensures space between text and image */
-  align-items: stretch; /* Make both the text and image containers stretch to the same height */
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch; /* Ensure both the text and image containers stretch to the same height */
+  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
 }
 
-.features-text {
-  width: 40%; /* Text takes up 40% of the section */
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* Vertically center text inside the container */
-  text-align: left; /* Keep the text left-aligned */
+.features-text, .features-image {
+  flex: 1 1 48%;
+  margin-bottom: 20px;
 }
+
+.features-text ul{
+  text-align: left;
+  padding-left: 20px;
+}
+
 
 .features-image {
-  width: 60%; /* Image takes up 60% of the section */
-  text-align: right; /* Align the image to the right */
-  display: flex;
-  justify-content: center; /* Center the image horizontally */
-  align-items: center; /* Vertically center the image inside the container */
+  display: flex; /* Use Flexbox to center content */
+  justify-content: center; /* Center the content horizontally */
+  align-items: center; /* Center the content vertically */
 }
 
 .features-image img {
-  width: 100%; /* Ensure the image takes full width of its container */
-  height: auto; /* Maintain aspect ratio */
-  border-radius: 8px; /* Optional: add border-radius for rounded corners */
-  object-fit: cover; /* Ensure the image covers the section without distortion */
-  display: block; /* Remove inline-block space */
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block; /* Ensure image behaves like a block element */
 }
 
-/* Fix for the unordered list (UL) on smaller screens */
-.features-text ul {
-  padding-left: 20px; /* Ensure padding for list items */
-  list-style-position: inside; /* This ensures bullets stay inside the container */
-}
-
-.features-text ul li {
-  margin-bottom: 10px;
-}
-
-/* Responsive Design for smaller screens */
 @media (max-width: 1024px) {
   .features-content {
-    flex-direction: column; /* Stack the content vertically on medium screens */
-    align-items: flex-start; /* Align items to the start (left) on smaller screens */
-    text-align: left; /* Left-align text */
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 
-  .features-text {
-    width: 100%; /* Full width for text */
-    margin-bottom: 20px; /* Space between text and image */
-  }
-
-  .features-image {
-    width: 100%; /* Full width for the image */
+  .features-text, .features-image {
+    width: 100%;
   }
 
   .features-image img {
-    width: 100%; /* Make image 100% width for smaller screens */
+    width: 100%;
   }
 }
 
-
 /* Early Learning Center Section */
 .early-learning-center {
-  background-color: #f5f5f5; /* Light grey background */
+  background-color: #f5f5f5;
   padding: 40px 0;
   margin-bottom: 40px;
 }
@@ -286,7 +330,7 @@ section .cta a:hover {
 .early-learning-center h2 {
   font-family: 'Oswald', sans-serif;
   font-weight: bold;
-  color: #771C24; /* Maroon color for the heading */
+  color: #771C24;
   font-size: 2.5em;
   margin-bottom: 20px;
 }
@@ -298,6 +342,7 @@ section .cta a:hover {
 }
 
 .early-learning-center ul {
+  text-align: left;
   padding-left: 20px;
 }
 
@@ -306,89 +351,62 @@ section .cta a:hover {
   margin-bottom: 10px;
 }
 
-/* Flexbox Layout for Early Learning Center content */
 .early-learning-content {
-  display: flex; /* Flexbox for side-by-side layout */
+  display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .early-learning-image {
-  width: 40%; /* Image takes up 40% of the section */
+  flex: 1 1 48%; /* Flexbox ensures equal space for image and text */
 }
 
 .early-learning-img {
-  width: 100%; /* Ensure the image takes up the full width of its container */
-  height: auto; /* Maintain aspect ratio */
-  border-radius: 0px; /* Optional: add border-radius for rounded corners */
-  object-fit: cover; /* Ensure the image covers the section without distortion */
-  display: block; /* Remove inline-block space */
+  width: 100%; /* Ensure image takes full width */
+  height: auto;
+  object-fit: cover;
 }
 
 .early-learning-text {
-  width: 60%; /* Text takes up 60% of the section */
-  padding-left: 30px; /* Add some padding to the left side of the text */
+  flex: 1 1 48%; /* Flexbox for equal width */
+  padding-left: 30px;
+  box-sizing: border-box; /* Ensure padding is accounted for in width */
+}
+
+/* Ensure container has proper padding and does not overflow */
+.early-learning-center .container {
+  padding: 0 20px; /* Add padding to ensure text doesn't touch edges */
+  box-sizing: border-box; /* Include padding in the total width */
 }
 
 /* Responsive Design for smaller screens */
 @media (max-width: 1024px) {
   .early-learning-content {
-    flex-direction: column; /* Stack the content vertically on medium screens */
-    text-align: center; /* Center-align text on smaller screens */
+    flex-direction: column; /* Stack content vertically on smaller screens */
     align-items: center; /* Center-align content */
+    text-align: center; /* Center text */
   }
 
   .early-learning-image,
   .early-learning-text {
-    width: 100%; /* Full width for both image and text on smaller screens */
-    margin-bottom: 20px; /* Space between the image and text */
+    width: 100%; /* Full width for image and text */
+    padding-left: 0; /* Remove padding */
+    margin-bottom: 20px; /* Add space between stacked columns */
   }
 
   .early-learning-img {
-    width: 100%; /* Make image 100% width for smaller screens */
+    width: 100%; /* Ensure image is responsive */
+  }
+
+  .early-learning-text {
+    padding-left: 0; /* Remove padding when stacking */
   }
 }
 
-/*Quote Container*/
-
-.quote {
-  padding: 0px 0px 20px 0px;
-}
-
-.quote .container{
-  padding: 0 40px;
-}
-
-.quote .container blockquote{
-  padding-right: 40px;
-}
-
-.quote-education {
-  padding: 0px 0px 20px 0px;
-}
-
-.quote-education .container{
-  padding: 0 40px;
-}
-
-.quote-educaiton .container blockquote{
-  padding-right: 40px;
-}
-
-
-/* Add margin and center the content */
-.container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-
-
 /* FAQ Section */
 .faq-section {
-  background-color: #fff; /* White background */
+  background-color: #fff;
   padding: 40px 0;
   margin-bottom: 40px;
 }
@@ -396,7 +414,7 @@ section .cta a:hover {
 .faq-section h2 {
   font-family: 'Oswald', sans-serif;
   font-weight: bold;
-  color: #771C24; /* Maroon color for the heading */
+  color: #771C24;
   font-size: 2.5em;
   margin-bottom: 20px;
   text-align: center;
@@ -420,7 +438,6 @@ section .cta a:hover {
   margin-bottom: 15px;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .faq-section {
     padding: 20px 0;
@@ -435,12 +452,10 @@ section .cta a:hover {
   }
 }
 
-
-
-/* Call to Action Section (Join Us: Help Bring This Vision to Life) */
+/* Call to Action Section */
 .cta {
-  background-color: #771C24; /* Maroon background */
-  color: #fff; /* White font */
+  background-color: #771C24;
+  color: #fff;
   padding: 40px 0;
   text-align: center;
   margin-bottom: 40px;
@@ -451,13 +466,12 @@ section .cta a:hover {
   font-weight: bold;
   font-size: 2.5em;
   margin-bottom: 20px;
-  color: #fff; /* White font */
 }
 
 .cta .cta-button {
   padding: 15px 30px;
-  background-color: #F7C325; /* Gold color for the button */
-  color: #771C24; /* Maroon font for the button text */
+  background-color: #F7C325;
+  color: #771C24;
   text-decoration: none;
   border-radius: 8px;
   font-size: 1.1em;
@@ -466,14 +480,13 @@ section .cta a:hover {
 }
 
 .cta .cta-button:hover {
-  background-color: #dea702; /* Darker gold */
-  transform: translateY(-3px); /* Slight lift effect */
+  background-color: #dea702;
+  transform: translateY(-3px);
 }
 
-/* Ensure it's responsive */
 @media (max-width: 768px) {
   .cta h2 {
-    font-size: 2em; /* Reduce font size on smaller screens */
+    font-size: 2em;
   }
 
   .cta .cta-button {
@@ -482,23 +495,21 @@ section .cta a:hover {
   }
 }
 
-
 /* Two Column Section */
 .two-column-section {
-  background-color: #fff; /* White background */
+  background-color: #fff;
   padding: 40px 0;
   margin-bottom: 40px;
 }
 
 .two-column-content {
-  display: flex; /* Flexbox for side-by-side layout */
-  justify-content: space-between; /* Ensure space between columns */
-  align-items: flex-start; /* Align content at the top */
+  display: flex; /* Use Flexbox for equal width columns */
+  justify-content: space-between; /* Space between the columns */
   flex-wrap: wrap; /* Allow wrapping on smaller screens */
 }
 
 .column {
-  width: 48%; /* Each column takes up 48% of the section's width */
+  width: 48%; /* Make each column 50% of the width, with some space between */
   padding: 20px;
   box-sizing: border-box;
   text-align: left;
@@ -530,7 +541,7 @@ section .cta a:hover {
 /* Responsive Design: Stack columns on smaller screens */
 @media (max-width: 768px) {
   .two-column-content {
-    flex-direction: column; /* Stack the content vertically on smaller screens */
+    flex-direction: column; /* Stack the columns vertically */
     text-align: center; /* Center-align text on smaller screens */
   }
 
@@ -538,55 +549,4 @@ section .cta a:hover {
     width: 100%; /* Full width for each column on smaller screens */
     margin-bottom: 20px; /* Space between stacked columns */
   }
-}
-
-
-
-
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  h1 {
-    font-size: 2.5em; /* Reduce size on mobile */
-  }
-
-  h2 {
-    font-size: 2em;
-  }
-
-  .cta-button {
-    padding: 12px 20px;
-    font-size: 1em;
-  }
-
-  footer {
-    font-size: 0.9em;
-  }
-}
-
-@media (max-width: 480px) {
-  header {
-    padding: 40px 0;
-  }
-
-  .cta-button {
-    font-size: 1em;
-    padding: 12px 25px;
-  }
-
-  .container {
-    width: 100%;
-    padding: 0 10px; /* Less padding on smaller devices */
-  }
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-/* Images */
-img {
-  max-width: 100%;
-  height: auto;
-  margin-top: 20px;
 }
