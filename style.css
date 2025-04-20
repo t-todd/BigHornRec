@@ -466,6 +466,7 @@ section .cta a:hover {
   font-weight: bold;
   font-size: 2.5em;
   margin-bottom: 20px;
+  color: #fff;
 }
 
 .cta .cta-button {
