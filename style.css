@@ -630,6 +630,10 @@ section .cta a:hover {
   margin-bottom: 40px;
 }
 
+.off-white{
+  color:#ddd;
+}
+
 .donate-columns {
   display: flex; /* Flexbox for three-column layout */
   justify-content: space-between; /* Distribute space between the columns */
