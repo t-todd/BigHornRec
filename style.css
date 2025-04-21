@@ -551,3 +551,172 @@ section .cta a:hover {
     margin-bottom: 20px; /* Space between stacked columns */
   }
 }
+
+
+
+
+/* Donate Instructions Section */
+.donate-instructions {
+  padding: 40px 0;
+  margin-bottom: 40px;
+}
+
+.donate-instructions h2 {
+  font-family: 'Oswald', sans-serif;
+  font-weight: bold;
+  color: #771C24; /* Maroon color for the heading */
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.donate-instructions p {
+  font-size: 1.1em;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.donate-instructions ul {
+  text-align: left;
+  padding-left: 20px;
+}
+
+.donate-instructions ul li {
+  margin-bottom: 10px;
+}
+
+.donate-instructions .cta-button {
+  padding: 15px 30px;
+  background-color: #F7C325; /* Gold color for the button */
+  color: #771C24;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 1.1em;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.donate-instructions .cta-button:hover {
+  background-color: #dea702; /* Darker gold */
+  transform: translateY(-3px); /* Slight lift effect */
+}
+
+/* Donation Instructions Section with Three Columns */
+.donate-instructions-section {
+  background-color: #fff; /* White background for the section */
+  padding: 0;
+  margin-bottom: 40px;
+}
+
+.donate-columns {
+  display: flex; /* Flexbox for three-column layout */
+  justify-content: space-between; /* Distribute space between the columns */
+  align-items: center; /* Center items vertically */
+}
+
+.donate-column-left, .donate-column-right {
+  flex: 1; /* Make left and right columns take equal space */
+}
+
+.donate-column-center {
+  flex: 2; /* Make center column twice as wide */
+  background-color: #771C24; /* Maroon background */
+  color: white; /* White text */
+  padding: 30px; /* Add padding for spacing */
+  text-align: center; /* Center the text in the center column */
+}
+
+.donate-column-center h2 {
+  font-family: 'Oswald', sans-serif;
+  font-weight: bold;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.donate-column-center p {
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+.donate-column-center p strong {
+  font-weight: bold; /* Emphasize the "Big Horn Baseball Club" text */
+}
+
+.payable {
+font-size: 1.3em;
+}
+
+.payable-address {
+font-size: 1.3em;
+}
+
+.small-notice {
+font-size: .8em;
+}
+
+
+/* Responsive Design for smaller screens */
+@media (max-width: 768px) {
+  .donate-columns {
+    flex-direction: column; /* Stack columns vertically on small screens */
+    text-align: center; /* Center-align text on smaller screens */
+  }
+
+  .donate-column-left, .donate-column-right {
+    flex: 1 1 100%; /* Full width for left and right columns on small screens */
+    margin-bottom: 20px; /* Add space between stacked columns */
+  }
+
+  .donate-column-center {
+    flex: 1 1 100%; /* Full width for the center column on small screens */
+    padding: 20px; /* Reduce padding on smaller screens */
+  }
+
+  .donate-column-center h2 {
+    font-size: 2em; /* Adjust heading size for smaller screens */
+  }
+
+  .donate-column-center p {
+    font-size: 1em; /* Adjust paragraph text for smaller screens */
+  }
+}
+
+/* Call to Action Section */
+.cta-section {
+  background-color: #fff;
+  padding: 0px 0;
+  text-align: center;
+  margin-top: 80px;
+}
+
+.cta-section .cta-button {
+  padding: 15px 30px;
+  background-color: #F7C325;
+  color: #771C24;
+  text-decoration: none;
+  border-radius: 0px;
+  font-size: 1.1em;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-section .cta-button:hover {
+  background-color: #dea702;
+  transform: translateY(-3px);
+}
+
+/* Footer Section */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #333;
+  color: white;
+}
+
+footer a {
+  color: #F7C325; /* Gold link color */
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
