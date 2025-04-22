@@ -717,8 +717,8 @@ font-size: .8em;
 
 .cta-section .cta-button {
   padding: 15px 30px;
-  background-color: #F7C325;
-  color: #771C24;
+  color: #D09B56;
+  background-color: #0E3143;
   text-decoration: none;
   border-radius: 0px;
   font-size: 1.1em;
@@ -727,23 +727,32 @@ font-size: .8em;
 }
 
 .cta-section .cta-button:hover {
-  background-color: #dea702;
+  background-color: #185574;
   transform: translateY(-3px);
 }
 
 /* Footer Section */
 footer {
   text-align: center;
-  padding: 20px;
-  background-color: #333;
-  color: white;
+  padding: 30px;
+  background-color: #0E3143; /* Dark blue background */
+  color: #D09B56; /* Gold text color */
+}
+
+footer .footer-logo {
+  width: 140px; /* Set the logo size */
+  margin-bottom: 15px; /* Space between logo and text */
 }
 
 footer a {
-  color: #F7C325; /* Gold link color */
+  color: #D09B56; /* Gold link color */
   text-decoration: none;
 }
 
 footer a:hover {
-  text-decoration: underline;
+  text-decoration: underline; /* Underline on hover */
+}
+
+.footer-contact-email{
+  margin:0;
 }
