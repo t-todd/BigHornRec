@@ -73,10 +73,7 @@ blockquote .author {
 }
 
 
-/* Hide navigation links on the Home page (index.html) */
-body.home .nav-section {
-  display: none; /* Hide the navigation links */
-}
+
 
 /* Global Navigation */
 .nav-section {
