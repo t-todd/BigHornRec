@@ -72,28 +72,72 @@ blockquote .author {
   margin: 0;
 }
 
-/* Nav Section */
+
+/* Hide navigation links on the Home page (index.html) */
+body.home .nav-section {
+  display: none; /* Hide the navigation links */
+}
+
+/* Global Navigation */
 .nav-section {
-  background-color: #fff;
+  background-color: #0E3143; /* Dark blue background */
+  padding: 15px 0;
+}
+
+.nav-section .container {
+  display: flex;
+  justify-content: space-between; /* Align logo and nav items */
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+nav a {
+  font-family: 'Oswald', sans-serif;
+  color: #D09B56; /* Gold text color */
+  font-size: 1.1em;
+  text-decoration: none;
+  margin-left: 20px;
+}
+
+nav a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+nav img.nav-logo {
+  width: 120px; /* Logo size */
+  margin-right: 20px; /* Space between logo and navigation links */
+}
+
+/* Title Section */
+.title-section {
+  background-color: #0E3143; /* Dark blue background */
   padding: 20px 0;
-  margin:0;
+  text-align: center;
 }
 
-.nav {
-  font-family: 'Roboto', sans-serif;
-  text-align: left;
-  margin: 0;
-  padding: 0 20px;
+.title-section .container .title {
+  color: #D09B56; /* Gold text color */
+  font-size: 2em;
+  font-weight: bold;
 }
 
-.nav a {
-  font-family: 'Roboto', sans-serif;
-  color: #771C24;
-  font-size: .8em;
-  text-align: left;
-  margin: 0;
-  padding: 0 20px;
+/* Headline Section */
+header {
+  background-color: #771C24; /* Maroon background */
+  color: white;
+  text-align: center;
+  padding: 50px 0; /* Add padding for spacing */
 }
+
+header h1 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 3em;
+  font-weight: bold;
+  color: white;
+  margin: 0;
+}
+
 
 /* Global container */
 .container {
