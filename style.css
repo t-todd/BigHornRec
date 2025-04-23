@@ -83,26 +83,24 @@ blockquote .author {
 
 .nav-section .container {
   display: flex;
-  justify-content: space-between; /* Ensure logo is on the left and nav items on the right */
+  justify-content: space-between; /* Align the logo and navigation links */
   align-items: center; /* Vertically center-align the items in the nav */
   max-width: 1200px;
   margin: 0 auto;
 }
 
 nav {
-  display: flex; /* Make the nav element use Flexbox */
-  justify-content: space-between; /* Space out the nav items horizontally */
-  align-items: center; /* Vertically center-align the <a> tags inside the nav */
-  width: 100%; /* Ensure the nav spans the full width */
+  display: flex; /* Flexbox for navigation links */
+  align-items: center; /* Vertically center the <a> tags inside the nav */
 }
 
 nav a {
   font-family: 'Oswald', sans-serif;
   color: #D09B56; /* Gold text color */
-  font-size: 1em;
+  font-size: 1.1em;
   text-decoration: none;
   margin-left: 20px; /* Space between the links */
-  padding: 10px 0; /* Add padding for better vertical centering */
+  padding: 10px 0; /* Ensure padding for better vertical alignment */
 }
 
 nav a:hover {
