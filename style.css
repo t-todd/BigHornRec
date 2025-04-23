@@ -78,7 +78,8 @@ blockquote .author {
 /* Global Navigation */
 .nav-section {
   background-color: #0E3143; /* Dark blue background */
-  padding: 0 0;
+  padding: 15px 0;
+  margin: 0;
 }
 
 .nav-section .container {
@@ -92,7 +93,7 @@ blockquote .author {
 nav a {
   font-family: 'Oswald', sans-serif;
   color: #D09B56; /* Gold text color */
-  font-size: 1.1em;
+  font-size: 1em;
   text-decoration: none;
   margin-left: 20px;
 }
