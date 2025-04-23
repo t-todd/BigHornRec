@@ -79,15 +79,21 @@ blockquote .author {
 .nav-section {
   background-color: #0E3143; /* Dark blue background */
   padding: 15px 0;
-  margin: 0;
 }
 
 .nav-section .container {
   display: flex;
-  justify-content: space-between; /* Align logo and nav items */
-  align-items: center;
+  justify-content: space-between; /* Ensure logo is on the left and nav items on the right */
+  align-items: center; /* Vertically center-align the items in the nav */
   max-width: 1200px;
   margin: 0 auto;
+}
+
+nav {
+  display: flex; /* Make the nav element use Flexbox */
+  justify-content: space-between; /* Space out the nav items horizontally */
+  align-items: center; /* Vertically center-align the <a> tags inside the nav */
+  width: 100%; /* Ensure the nav spans the full width */
 }
 
 nav a {
@@ -95,7 +101,8 @@ nav a {
   color: #D09B56; /* Gold text color */
   font-size: 1em;
   text-decoration: none;
-  margin-left: 20px;
+  margin-left: 20px; /* Space between the links */
+  padding: 10px 0; /* Add padding for better vertical centering */
 }
 
 nav a:hover {
