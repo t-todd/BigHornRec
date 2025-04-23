@@ -79,6 +79,7 @@ blockquote .author {
 .nav-section {
   background-color: #0E3143; /* Dark blue background */
   padding: 15px 0;
+  margin: 0;
 }
 
 .nav-section .container {
