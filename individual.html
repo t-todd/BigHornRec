@@ -15,11 +15,13 @@
 <section class="nav-section">
   <div class="container">
     <nav>
-      <a href="/"><img src="/images/BHRecLogo.png" alt="Logo" class="nav-logo"></a> <!-- Logo on the left -->
-      <a href="/corporate.html">Corporate & Foundation Support</a>
-      <a href="/individual.html">Family & Individual Support</a>
-      <a href="/news.html" class="active">News</a>
-   
+      <a href="/"><img src="/images/BHRecLogo.png" alt="Logo" class="nav-logo"></a>
+      <button class="nav-toggle" id="nav-toggle">&#9776;</button>
+      <div class="nav-links" id="nav-links">
+        <a href="/corporate.html">Corporate Support</a>
+        <a href="/individual.html">Family & Individual Support</a>
+        <a href="/news.html">News</a>
+      </div>
     </nav>
   </div>
 </section>
@@ -99,6 +101,12 @@
     <p class="footer-contact-email">Contact us at: <a href="mailto:bighornbaseballclub@gmail.com">bighornbaseballclub@gmail.com</a></p>
   </div>
 </footer>
+
+<script>
+  document.getElementById('nav-toggle').addEventListener('click', function () {
+    document.getElementById('nav-links').classList.toggle('show');
+  });
+</script>
 
 </body>
 </html>
