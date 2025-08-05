@@ -84,33 +84,91 @@ blockquote .author {
 
 .nav-section .container {
   display: flex;
-  justify-content: space-between; /* Align the logo and navigation links */
-  align-items: center; /* Vertically center-align the items in the nav */
+  justify-content: space-between;
+  align-items: center;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-nav {
-  display: flex; /* Flexbox for navigation links */
-  align-items: center; /* Vertically center the <a> tags inside the nav */
+/* Logo */
+nav img.nav-logo {
+  width: 140px;
+  margin-right: 20px;
 }
 
-nav a {
+/* Main nav container */
+nav {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+/* Navigation links wrapper */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Individual nav link */
+.nav-links a {
   font-family: 'Oswald', sans-serif;
   color: #D09B56; /* Gold text color */
   font-size: 1.1em;
   text-decoration: none;
-  margin-left: 20px; /* Space between the links */
-  padding: 10px 0; /* Ensure padding for better vertical alignment */
+  padding: 10px 0;
 }
 
-nav a:hover {
-  text-decoration: underline; /* Underline on hover */
+.nav-links a:hover {
+  text-decoration: underline;
 }
 
-nav img.nav-logo {
-  width: 140px; /* Logo size */
-  margin-right: 20px; /* Space between logo and navigation links */
+/* Hamburger menu button */
+.nav-toggle {
+  display: none; /* Hidden by default (desktop) */
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: #D09B56;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+/* Responsive: Mobile layout */
+@media (max-width: 768px) {
+  .nav-section .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-logo {
+    margin: 0 0 10px 0;
+  }
+
+  .nav-toggle {
+    display: block; /* Show hamburger */
+  }
+
+  .nav-links {
+    display: none; /* Hide links initially */
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .nav-links.show {
+    display: flex; /* Show links when toggled */
+  }
+
+  .nav-links a {
+    margin: 10px 0;
+    font-size: 1.2em;
+  }
 }
 
 /* Title Section */
