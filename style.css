@@ -862,3 +862,11 @@ footer a:hover {
 .footer-contact-email{
   margin:0;
 }
+
+.news-item h2 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+    color: #771C24; /* Maroon color */
+    font-size: 2em;
+    margin-bottom: 10px;
+}
