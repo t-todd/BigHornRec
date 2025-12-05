@@ -870,3 +870,33 @@ footer a:hover {
     font-size: 2em;
     margin-bottom: 10px;
 }
+
+
+
+
+/* Index - Large logo above footer */
+.bottom-logo-section {
+  background-color: #fff;
+  padding: 0 0 30px;   /* space above footer */
+  margin-bottom: 0;
+}
+
+.bottom-logo-wrapper {
+  display: flex;
+  justify-content: flex-end;   /* pushes logo to the right side */
+  margin-top: 120px;
+}
+
+/* Keep aspect ratio – 500x700-ish on desktop, scale down on mobile */
+.bottom-logo {
+  width: 500px;
+  max-width: 100%;   /* so it doesn’t overflow on small screens */
+  height: auto;
+}
+
+/* On mobile, center the logo */
+@media (max-width: 768px) {
+  .bottom-logo-wrapper {
+    justify-content: center;
+  }
+}
