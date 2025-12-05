@@ -889,7 +889,7 @@ footer a:hover {
 
 /* Keep aspect ratio – 500x700-ish on desktop, scale down on mobile */
 .bottom-logo {
-  width: 500px;
+  width: 300px;
   max-width: 100%;   /* so it doesn’t overflow on small screens */
   height: auto;
 }
