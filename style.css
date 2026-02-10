@@ -625,6 +625,12 @@ section .cta a:hover {
   }
 }
 
+.venmo-image {
+  width: 150px;
+  height: auto;
+  margin-top: 20px;
+}
+
 /* Two Column Section */
 .two-column-section {
   background-color: #fff;
