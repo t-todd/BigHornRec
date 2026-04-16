@@ -890,7 +890,7 @@ footer a:hover {
 .bottom-logo-wrapper {
   display: flex;
   justify-content: flex-start;   /* pushes logo to the right side */
-  margin-top: 90px;
+  margin-top: 60px;
 }
 
 /* Keep aspect ratio – 500x700-ish on desktop, scale down on mobile */
