@@ -1,0 +1,26 @@
+{
+  "title": "News | Big Horn Community Recreation & Early Learning Center",
+  "description": "Big Horn Community Recreation & Early Learning Center - News",
+  "label": "Big Horn Community Recreation & Early Learning Center",
+  "headline": "Latest News & Updates",
+  "hero": "",
+  "heroAlt": "",
+  "sections": [
+    {
+      "title": "",
+      "anchor": "",
+      "appearance": "standard",
+      "body": "",
+      "image": "",
+      "imageAlt": "",
+      "imageSide": "right",
+      "buttonLabel": "Support the Project",
+      "buttonUrl": "/individual.html",
+      "layout": "standard"
+    }
+  ],
+  "kind": "news",
+  "eyebrow": "Project news",
+  "heroButtonLabel": "",
+  "heroButtonUrl": ""
+}

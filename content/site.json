@@ -1,0 +1,19 @@
+{
+  "name": "Big Horn Community Recreation & Early Learning Center",
+  "logo": "/images/BigHornRecLogo.webp",
+  "email": "bighornbaseballclub@gmail.com",
+  "navigation": [
+    {
+      "label": "Corporate Support",
+      "href": "/corporate.html"
+    },
+    {
+      "label": "Family & Individual Support",
+      "href": "/individual.html"
+    },
+    {
+      "label": "News",
+      "href": "/news.html"
+    }
+  ]
+}

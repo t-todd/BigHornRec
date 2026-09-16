@@ -1,0 +1,11 @@
+---
+interface Props {
+  url: string;
+  image?: { src: string; alt: string; width: number; height: number };
+}
+const { url, image } = Astro.props;
+---
+<div class="facebook-post">
+  {image && <img src={image.src} alt={image.alt} width={image.width} height={image.height} loading="lazy" />}
+  <a class="button" href={url} target="_blank" rel="noopener noreferrer">Open on Facebook</a>
+</div>

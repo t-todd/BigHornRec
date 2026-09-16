@@ -1,0 +1,20 @@
+---
+import Page from '../components/Page.astro';
+import { pages, newsUpdates, renderContent } from '../lib/content';
+import FacebookPost from '../components/FacebookPost.astro';
+const formatDate = (date: string) => new Intl.DateTimeFormat('en-US', { dateStyle: 'long', timeZone: 'UTC' }).format(new Date(`${date}T12:00:00Z`));
+---
+<Page page={pages.news}>
+  <div class="container news-feed">
+    {newsUpdates.map(update => (
+      <article class="news-item">
+        <time datetime={update.date}>{formatDate(update.date)}</time>
+        <h2>{update.title}</h2>
+        <div class="news-body">
+          <div class="prose" set:html={renderContent(update.content)} />
+          {update.facebookPostUrl && <FacebookPost url={update.facebookPostUrl} image={update.facebookPostImage} />}
+        </div>
+      </article>
+    ))}
+  </div>
+</Page>

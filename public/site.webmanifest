@@ -1,0 +1,23 @@
+{
+  "name": "Big Horn Community Recreation & Early Learning Center",
+  "short_name": "Big Horn Rec",
+  "start_url": "/",
+  "scope": "/",
+  "display": "browser",
+  "theme_color": "#102f3d",
+  "background_color": "#ffffff",
+  "icons": [
+    {
+      "src": "/images/android-chrome-192x192.png?v=20260916",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/images/android-chrome-512x512.png?v=20260916",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

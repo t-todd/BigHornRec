@@ -1,0 +1,22 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+---
+<SiteLayout title="Page not found | Big Horn Recreation" description="This page could not be found." noindex>
+  <section class="not-found"><div class="container">
+    <p class="error-code" aria-label="Error 404">404</p>
+    <h1>Page not found</h1>
+    <p class="error-description">This link may be out of date, or the address may have been mistyped. You can still explore the project and catch up on our latest news.</p>
+    <div class="error-actions">
+      <a class="button" href="/">Back to home</a>
+      <a class="button button-outline" href="/news.html">Latest news</a>
+    </div>
+  </div></section>
+</SiteLayout>
+<style>
+  .not-found { background: var(--muted); text-align: center; padding-block: clamp(3rem, 8vw, 6rem); }
+  .error-code { color: var(--maroon); font: 700 clamp(6rem, 16vw, 10rem)/1 var(--display); letter-spacing: .04em; margin: 0 0 1rem; }
+  .not-found h1 { font-size: clamp(2.7rem, 6vw, 4rem); }
+  .error-description { max-width: 36rem; margin: 1.5rem auto 2rem; }
+  .error-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; }
+  @media (max-width: 480px) { .error-actions { flex-direction: column; } }
+</style>

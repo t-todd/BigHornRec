@@ -1,0 +1,62 @@
+{
+  "title": "Corporate & Foundation Donations - Big Horn Community Recreation & Early Learning Center",
+  "description": "Corporate Donation Page for Big Horn Community Recreation & Early Learning Center",
+  "label": "Corporate & Foundation Support",
+  "headline": "Partner with Us to Build a Strong Future",
+  "hero": "/images/BIGHORN RENDER 7.jpg",
+  "heroAlt": "Architectural rendering of the proposed Big Horn Recreation Center",
+  "sections": [
+    {
+      "title": "How to Donate",
+      "anchor": "",
+      "appearance": "standard",
+      "body": "Your generous donation or in-kind services helps us build a state-of-the-art facility for the Big Horn community, providing spaces for both recreation and early childhood education. Here’s how you can help:",
+      "image": "",
+      "imageAlt": "",
+      "imageSide": "right",
+      "buttonLabel": "",
+      "buttonUrl": "",
+      "layout": "intro"
+    },
+    {
+      "title": "",
+      "anchor": "",
+      "appearance": "maroon",
+      "body": "Please make checks payable to:\n\n**Big Horn Baseball Club**\n\n  \n\nPlease mail checks to:\n\n**Big Horn Baseball Club**  \n2 Cardiff Ct.  \nSheridan, WY 82801",
+      "image": "",
+      "imageAlt": "",
+      "imageSide": "right",
+      "buttonLabel": "",
+      "buttonUrl": "",
+      "layout": "donation"
+    },
+    {
+      "title": "Corporate Donation Opportunities",
+      "anchor": "giving-opportunities",
+      "appearance": "standard",
+      "body": "Your generous support will help us build a state-of-the-art recreation and education center for Big Horn. Whether you are able to donate cash or contribute services, we offer a variety of sponsorship opportunities tailored for businesses like yours.\n\n### Incentives for Your Generosity:\n\n-   **Donate $25,000:** Get a wall banner showcasing your business at the facility.\n-   **Donate $50,000:** Receive 6 assignable lifetime family memberships.\n-   **Donate $150,000+:** Get named sponsorship of the Weight & Fitness Room (1 available).\n-   **Donate $200,000+:** Get named sponsorship of a room in the Early Education Wing (4 available).\n-   **Donate $250,000+:** Get your company logo on the hardwood floor (4 available).\n\n### Cash & In-Kind Donations\n\nWe welcome both **cash donations** and **in-kind donations**. Your company can help us with construction, materials, equipment, or any other services needed for the project. We value all contributions and will ensure your company is recognized for its generosity.",
+      "image": "",
+      "imageAlt": "",
+      "imageSide": "right",
+      "buttonLabel": "Contact Us for Corporate Giving Opportunities",
+      "buttonUrl": "mailto:bighornbaseballclub@gmail.com?subject=Corporate Donor Contact",
+      "layout": "opportunities"
+    },
+    {
+      "title": "Join Us: Help Bring This Vision to Life",
+      "anchor": "get-involved",
+      "appearance": "maroon",
+      "body": "",
+      "image": "",
+      "imageAlt": "",
+      "imageSide": "right",
+      "buttonLabel": "",
+      "buttonUrl": "",
+      "layout": "standard"
+    }
+  ],
+  "kind": "giving",
+  "eyebrow": "Corporate & Foundation Support",
+  "heroButtonLabel": "Explore giving opportunities",
+  "heroButtonUrl": "#giving-opportunities"
+}

@@ -1,0 +1,71 @@
+---
+import { site } from '../lib/content';
+import '../styles/site.css';
+interface Props { title: string; description: string; noindex?: boolean; }
+const { title, description, noindex = false } = Astro.props;
+const path = Astro.url.pathname.replace(/\.html$/, '').replace(/\/$/, '') || '/';
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    {noindex && <meta name="robots" content="noindex" />}
+    <title>{title}</title>
+    <link rel="icon" type="image/x-icon" sizes="16x16 32x32 48x48" href="/favicon.ico?v=20260916" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png?v=20260916" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png?v=20260916" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png?v=20260916" />
+    <link rel="manifest" href="/site.webmanifest?v=20260916" />
+    <meta name="theme-color" content="#102f3d" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="site-nav">
+      <nav class="container" aria-label="Main navigation">
+        <a class="brand" href="/" aria-label={`${site.name} home`}>
+          <span class="brand-name">BIG HORN<span>Recreation & Early Learning</span></span>
+        </a>
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links">Menu <span aria-hidden="true">☰</span></button>
+        <div class="nav-links" id="nav-links">
+          {site.navigation.map(link => <a href={link.href} aria-current={path === link.href.replace(/\.html$/, '') ? 'page' : undefined}>{link.label}</a>)}
+          <a class="nav-support" href="/#get-involved">Support the project <span aria-hidden="true">↗</span></a>
+        </div>
+      </nav>
+    </div>
+    <main id="main"><slot /></main>
+    <footer class="site-footer">
+      <div class="container footer-main">
+        <div class="footer-brand">{site.logo && <a href="/" aria-label="Home"><img src={site.logo} alt={site.name} width="740" height="740" /></a>}<p>{site.name}</p></div>
+        <div class="footer-contact"><span class="eyebrow">Get in touch</span><p>Contact us at: <a href={`mailto:${site.email}`}>{site.email}</a></p></div>
+      </div>
+      <div class="container footer-bottom"><span>Big Horn, Wyoming</span><nav aria-label="Footer navigation">{site.navigation.map(link => <a href={link.href}>{link.label}</a>)}</nav></div>
+    </footer>
+    <script>
+      const toggle = document.querySelector<HTMLButtonElement>('.nav-toggle');
+      const links = document.getElementById('nav-links');
+      links?.addEventListener('click', event => {
+        if (event.target instanceof Element && event.target.closest('a')) {
+          toggle?.setAttribute('aria-expanded', 'false');
+          links.classList.remove('open');
+        }
+      });
+      toggle?.addEventListener('click', () => {
+        const expanded = toggle.getAttribute('aria-expanded') !== 'true';
+        toggle.setAttribute('aria-expanded', String(expanded));
+        links?.classList.toggle('open', expanded);
+      });
+      document.addEventListener('keydown', event => {
+        if (event.key === 'Escape' && toggle?.getAttribute('aria-expanded') === 'true') {
+          toggle.setAttribute('aria-expanded', 'false');
+          links?.classList.remove('open');
+          toggle.focus();
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,50 @@
+{
+  "title": "Donate to Big Horn Baseball Club",
+  "description": "Donate to the Big Horn Community Recreation & Early Learning Center",
+  "label": "Family & Individual Support",
+  "headline": "Make a Difference in Our Community",
+  "hero": "/images/BIGHORN RENDER 7.jpg",
+  "heroAlt": "Architectural rendering of the proposed Big Horn Recreation Center",
+  "sections": [
+    {
+      "title": "How to Donate",
+      "anchor": "",
+      "appearance": "standard",
+      "body": "Your generous donation helps us build a state-of-the-art facility for the Big Horn community, providing spaces for both recreation and early childhood education. Here’s how you can help:",
+      "image": "",
+      "imageAlt": "",
+      "imageSide": "right",
+      "buttonLabel": "",
+      "buttonUrl": "",
+      "layout": "intro"
+    },
+    {
+      "title": "",
+      "anchor": "",
+      "appearance": "maroon",
+      "body": "Please make checks payable to:\n\n**Big Horn Baseball Club**\n\n  \n\nPlease mail checks to:\n\n**Big Horn Baseball Club**  \n2 Cardiff Ct.  \nSheridan, WY 82801\n\n  \n\nYou can also donate online via Venmo:\n\n![Big Horn Baseball Club Venmo](/images/BigHornBaseballClubVenmo.png)  \n[@BigHornbaseballclub](https://account.venmo.com/u/bighornbaseballclub)",
+      "image": "",
+      "imageAlt": "",
+      "imageSide": "right",
+      "buttonLabel": "",
+      "buttonUrl": "",
+      "layout": "donation"
+    },
+    {
+      "title": "Incentives for Your Generosity",
+      "anchor": "giving-opportunities",
+      "appearance": "standard",
+      "body": "We would like to thank you for your contribution. Based on your donation amount, you’ll receive one of the following special incentives:\n\n-   **Donate $1,000:** Receive a gift of 1 year of family membership\n-   **Donate $5,000:** Receive a gift of 7 years of family membership\n-   **Donate $10,000:** Receive a gift of lifetime family membership\n-   **Donate $25,000:** Receive 3 assignable lifetime family memberships\n\n  \n\n### Every Donation Counts\n\nWhether you donate $10 or $10,000, your support will help us create a lasting legacy for the Big Horn community. Thank you for your generous contribution!\n\n  \n\n**Family Memberships:** A family membership includes up to two adults living in the same household and their dependent children under the age of 25. Dependents must reside in the household or be temporarily away for school or similar reasons.\n\n**Membership Assignment & Non-Transferability:** Family memberships offered as part of donation incentives are generally **non-transferable** and are intended for use by the donor or their immediate family. However, for qualifying major gifts, donors may choose to assign a **lifetime membership** to a family of their choosing. Once assigned, this membership becomes non-transferable and is tied to the designated recipient family. Please contact us for details about eligibility and assignment procedures.\n\n**Tax Deductibility Notice:** Donations to the Big Horn Baseball Club are tax-deductible to the extent that the donation exceeds the fair market value of any goods or services provided in return. The **value of the membership incentives** is not deductible as a charitable donation. However, if you prefer not to receive membership benefits, you may opt out, and your full donation will remain tax-deductible. Please consult your tax advisor for details regarding the tax treatment of your donation and the associated benefits.",
+      "image": "",
+      "imageAlt": "",
+      "imageSide": "right",
+      "buttonLabel": "",
+      "buttonUrl": "",
+      "layout": "opportunities"
+    }
+  ],
+  "kind": "giving",
+  "eyebrow": "Family & Individual Support",
+  "heroButtonLabel": "Explore giving opportunities",
+  "heroButtonUrl": "#giving-opportunities"
+}

@@ -1,0 +1,42 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import MobileGivingActions from './MobileGivingActions.astro';
+import { renderContent, type PageContent } from '../lib/content';
+interface Props { page: PageContent; }
+const { page } = Astro.props;
+const faqItems = (body: string) => body.split(/^### /m).filter(Boolean).map(part => {
+  const [title, ...lines] = part.split('\n');
+  return { title: title.replace(/\\\./g, '.'), body: lines.join('\n') };
+});
+---
+<SiteLayout title={page.title} description={page.description}>
+  <div class:list={['page', `page-${page.kind || 'standard'}`]}>
+  <header class:list={['page-heading', { 'has-image': !!page.hero }]}>
+    <div class="hero-layout container">
+      <div class="hero-copy">
+        <p class="eyebrow">{page.eyebrow || page.label}</p>
+        <h1>{page.headline}</h1>
+        {page.kind === 'home' && <p class="hero-description">{page.label}</p>}
+        {page.heroButtonLabel && <a class="button button-gold" href={page.heroButtonUrl}>{page.heroButtonLabel}<span aria-hidden="true">↗</span></a>}
+      </div>
+      {page.hero && <figure class="hero-image"><img src={page.hero} alt={page.heroAlt} fetchpriority="high" /><figcaption>Big Horn Recreation & Early Learning Center <span>Proposed facility</span></figcaption></figure>}
+    </div>
+  </header>
+  <slot />
+  {page.sections.map(section => (
+    <section id={section.anchor || undefined} class:list={['content-section', section.appearance, `layout-${section.layout || 'standard'}`, { 'button-section': !section.title && !section.body.trim() && section.buttonLabel, 'statement-section': section.title && !section.body && !section.image }]}>
+      <div class:list={['container', 'section-layout', { split: !!section.image, 'image-left': section.imageSide === 'left' }]}>
+        <div class="section-copy">
+          {section.title && <h2>{section.title}</h2>}
+          {['donation', 'contact'].includes(section.layout || '') && <MobileGivingActions venmo={section.body.includes('https://account.venmo.com/u/bighornbaseballclub')} />}
+          {section.layout === 'faq' ? <div class="faq-list">{faqItems(section.body).map(item => <details><summary><h3>{item.title}</h3><span aria-hidden="true" class="faq-icon"></span></summary><div class="prose" set:html={renderContent(item.body)} /></details>)}</div>
+          : section.layout === 'contact' ? <div class="contact-columns">{section.body.split('### Contact Us').map((body, index) => <div class="prose" set:html={renderContent(index ? '### Contact Us' + body : body)} />)}</div>
+          : <div class="prose" set:html={renderContent(section.body)} />}
+          {section.buttonLabel && section.buttonUrl && <p class="section-action"><a class="button" href={section.buttonUrl}>{section.buttonLabel}</a></p>}
+        </div>
+        {section.image && <img class="section-image" src={section.image} alt={section.imageAlt} loading="lazy" />}
+      </div>
+    </section>
+  ))}
+  </div>
+</SiteLayout>

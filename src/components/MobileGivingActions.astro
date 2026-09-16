@@ -1,0 +1,9 @@
+---
+import { site } from '../lib/content';
+interface Props { venmo?: boolean; }
+const { venmo = false } = Astro.props;
+---
+<div class="mobile-giving-actions" aria-label="Donation and contact options">
+  {venmo && <a class="button" href="https://account.venmo.com/u/bighornbaseballclub">Donate with Venmo</a>}
+  <a class="button button-outline" href={`mailto:${site.email}`}>Email us</a>
+</div>
