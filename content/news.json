@@ -1,5 +1,18 @@
 [
   {
+    "title": "Breaking Ground Together",
+    "date": "2026-09-17",
+    "order": 0,
+    "content": "Today, the Big Horn community came together to celebrate the groundbreaking of the **Big Horn Recreation & Early Learning Center**. Students, families, and neighbors gathered at the site to mark this milestone for a place dedicated to learning, recreation, and community connection.\n\nThank you to everyone who joined us and to all who have helped bring this project to this moment. We’re excited to share the progress ahead!",
+    "photos": [
+      { "file": "groundbreaking-ceremony.jpg", "alt": "Students with red shovels stand in front of a grader as the community gathers for the groundbreaking.", "caption": "Celebrating a new chapter for Big Horn on September 17, 2026." },
+      { "file": "groundbreaking-site.jpg", "alt": "An excavator and the recreation center coming soon sign at the site, with the mountains behind them.", "caption": "The future home of the Recreation & Early Learning Center." },
+      { "file": "groundbreaking-community.jpg", "alt": "A crowd of students and community members surrounds the groundbreaking ceremony beside construction equipment.", "caption": "A community milestone, shared together." },
+      { "file": "groundbreaking-thank-you-donors.jpg", "alt": "A handmade sign reading Thank You Donors in black lettering outlined in pink, with red corners.", "caption": "A heartfelt thank-you to the donors helping make this project possible." },
+      { "file": "groundbreaking-thank-you-messages.jpg", "alt": "A poster filled with colorful handwritten thank-you messages and signatures.", "caption": "Gratitude in every color: handwritten messages of thanks." }
+    ]
+  },
+  {
     "title": "You’re Invited: Groundbreaking Ceremony",
     "date": "2026-09-05",
     "order": 0,

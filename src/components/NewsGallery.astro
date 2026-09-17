@@ -1,0 +1,35 @@
+---
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+interface Props {
+  photos: { file: string; alt: string; caption: string }[];
+}
+const { photos } = Astro.props;
+const images = import.meta.glob<{ default: ImageMetadata }>('../assets/news/*.jpg', { eager: true });
+---
+<div class="news-gallery">
+  {photos.map(photo => (
+    <figure>
+      <Image
+        src={images[`../assets/news/${photo.file}`].default}
+        alt={photo.alt}
+        widths={[400, 800, 1600]}
+        sizes="(max-width: 760px) 92vw, 800px"
+        width={1600}
+        format="webp"
+        loading="lazy"
+      />
+      <figcaption>{photo.caption}</figcaption>
+    </figure>
+  ))}
+</div>
+<style>
+  .news-gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.25rem; margin-top: 1.75rem; }
+  figure { margin: 0; min-width: 0; }
+  figure:first-child { grid-column: 1 / -1; }
+  img { display: block; width: 100%; height: auto; border-radius: .75rem; }
+  figcaption { margin-top: .6rem; font-size: .8125rem; line-height: 1.5; color: var(--muted, #52616a); }
+  @media (max-width: 600px) {
+    .news-gallery { grid-template-columns: 1fr; }
+  }
+</style>
