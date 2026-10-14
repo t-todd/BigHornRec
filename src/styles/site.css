@@ -63,7 +63,8 @@ li::marker { color: #a67536; }
 .content-section { padding-block: 5.5rem; }
 .section-copy { min-width: 0; }
 .section-layout:not(.split) { max-width: 1080px; }
-.prose { max-width: 100%; }
+/* Keep literal text such as 501(c)(3); Manrope combines (c) into a copyright glyph. */
+.prose { max-width: 100%; font-variant-ligatures: none; }
 .prose > article > :last-child, .prose > :last-child { margin-bottom: 0; }
 .prose p { max-width: 76ch; }
 .split { display: grid; grid-template-columns: 1fr 1.05fr; align-items: center; gap: 5rem; }
