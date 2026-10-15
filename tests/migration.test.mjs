@@ -8,6 +8,14 @@ import { load } from 'cheerio';
 const pages = ['index', 'corporate', 'individual', 'news'];
 const normalize = text => text.replaceAll('Auguest', 'August').replaceAll('**', '').replace(/\s+/g, '').normalize('NFC');
 const parse = async file => load(await readFile(file, 'utf8'));
+const updatedCopy = new Map([
+  ['Donate $250,000+: Get your company logo on the hardwood floor (4 available).',
+    'Donate $250,000+: Get your company logo or name on the hardwood floor (4 available).'],
+  ['Donate $200,000+: Get named sponsorship of a room in the Early Education Wing (4 available).',
+    'Donate $200,000+: Get named sponsorship of a room in the Early Education Wing (2 remaining).'],
+  ['Upon hitting a predefined funding goal, we will begin the process of breaking ground.',
+    'Ground has been broken, bringing our community’s vision for a place to learn, play, and grow one step closer to reality. We hope to complete the Early Learning Center by September 2027, with the recreation center potentially following a few months later.'],
+]);
 
 for (const page of pages) {
   test(`${page}: all original paragraphs, list items, and headings survive migration`, async () => {
@@ -15,7 +23,8 @@ for (const page of pages) {
     const current = await parse(`dist/${page}.html`);
     const text = normalize(current('body').text());
     old('p, li, h1, h2, h3').each((_, element) => {
-      const original = old(element).text().trim();
+      const legacyText = old(element).text().trim();
+      const original = updatedCopy.get(legacyText) ?? legacyText;
       if (!original) return;
       const parts = page === 'news' && element.tagName === 'h2' ? original.split(' – ') : [original];
       for (const part of parts) assert.ok(text.includes(normalize(part)), `Missing content: ${part}`);
