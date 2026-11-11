@@ -43,6 +43,7 @@ const path = Astro.url.pathname.replace(/\.html$/, '').replace(/\/$/, '') || '/'
         <div class="footer-brand">{site.logo && <a href="/" aria-label="Home"><img src={site.logo} alt={site.name} width="740" height="740" /></a>}<p>{site.name}</p></div>
         <div class="footer-contact"><span class="eyebrow">Get in touch</span><p>Contact us at: <a href={`mailto:${site.email}`}>{site.email}</a></p></div>
       </div>
+      <div class="container footer-nonprofit"><p>Big Horn Baseball Club is a 501(c)(3) nonprofit organization. EIN: 83-2822645. Contributions are tax-deductible to the extent permitted by law.</p></div>
       <div class="container footer-bottom"><span>Big Horn, Wyoming</span><nav aria-label="Footer navigation">{site.navigation.map(link => <a href={link.href}>{link.label}</a>)}</nav></div>
     </footer>
     <script>

@@ -150,6 +150,8 @@ blockquote p:last-child:not(:first-child) { color: #6c7d85; font-size: .8125rem;
 .footer-contact .eyebrow { color: var(--gold); margin-bottom: 1rem; }
 .footer-contact p { font-size: .8125rem; margin: 0; }
 .footer-contact a { display: block; color: white; font-size: .9375rem; text-decoration: none; }
+.footer-nonprofit { padding-bottom: 1.5rem; }
+.footer-nonprofit p { margin: 0; font-size: .8125rem; line-height: 1.6; }
 .footer-bottom { display: flex; justify-content: space-between; gap: 2rem; padding-block: 1.4rem; border-top: 1px solid #ffffff20; font-size: .75rem; }
 .footer-bottom nav { display: flex; flex-wrap: wrap; gap: 1.5rem; }
 .footer-bottom a { color: #b7c7cf; text-decoration: none; }

@@ -9,10 +9,12 @@ const pages = ['index', 'corporate', 'individual', 'news'];
 const normalize = text => text.replaceAll('Auguest', 'August').replaceAll('**', '').replace(/\s+/g, '').normalize('NFC');
 const parse = async file => load(await readFile(file, 'utf8'));
 const updatedCopy = new Map([
+  ['Donate $150,000+: Get named sponsorship of the Weight & Fitness Room (1 available).',
+    'Donate $150,000+: Get named sponsorship of the Weight & Fitness Room (1 available). Also receive 6 assignable lifetime family memberships.'],
   ['Donate $250,000+: Get your company logo on the hardwood floor (4 available).',
-    'Donate $250,000+: Get your company logo or name on the hardwood floor (4 available).'],
+    'Donate $250,000+: Get your company logo or name on the hardwood floor (4 available). Also receive 6 assignable lifetime family memberships.'],
   ['Donate $200,000+: Get named sponsorship of a room in the Early Education Wing (4 available).',
-    'Donate $200,000+: Get named sponsorship of a room in the Early Education Wing (2 remaining).'],
+    'Donate $200,000+: Get named sponsorship of a room in the Early Education Wing (2 remaining). Also receive 6 assignable lifetime family memberships.'],
   ['Upon hitting a predefined funding goal, we will begin the process of breaking ground.',
     'Ground has been broken, bringing our community’s vision for a place to learn, play, and grow one step closer to reality. We hope to complete the Early Learning Center by September 2027, with the recreation center potentially following a few months later.'],
 ]);
