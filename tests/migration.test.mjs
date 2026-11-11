@@ -9,6 +9,8 @@ const pages = ['index', 'corporate', 'individual', 'news'];
 const normalize = text => text.replaceAll('Auguest', 'August').replaceAll('**', '').replace(/\s+/g, '').normalize('NFC');
 const parse = async file => load(await readFile(file, 'utf8'));
 const updatedCopy = new Map([
+  ['You can support Big Horn Baseball Club with a grant from your donor-advised fund, including funds held at the American Endowment Foundation (AEF) and other sponsoring organizations. Your support helps expand youth recreation, early childhood education, and year-round community space in Big Horn and Sheridan County.',
+    'You can support Big Horn Baseball Club by recommending a grant from your donor-advised fund. Use the organization details below when submitting your recommendation through your fund provider.'],
   ['Donate $150,000+: Get named sponsorship of the Weight & Fitness Room (1 available).',
     'Donate $150,000+: Get named sponsorship of the Weight & Fitness Room (1 available). Also receive 6 assignable lifetime family memberships.'],
   ['Donate $250,000+: Get your company logo on the hardwood floor (4 available).',
