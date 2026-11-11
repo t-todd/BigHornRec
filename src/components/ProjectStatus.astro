@@ -17,7 +17,7 @@ const updated = new Date(`${status.updated}T12:00:00Z`).toLocaleDateString('en-U
         <p class="status-total"><strong>{millions(status.committed)}</strong> committed</p>
         <progress value={status.committed} max={status.goal} aria-label={`${millions(status.committed)} committed toward our ${millions(status.goal)} fundraising goal`}>{percent}%</progress>
         <div class="status-progress-labels"><span>Approximately {percent}% of {millions(status.goal)} goal</span><strong>{millions(status.goal - status.committed)} remaining</strong></div>
-        <p class="status-note">The committed total includes a conditional $150,000 foundation pledge. The $150,000 donor contribution needed to secure it is still to be raised and is not included.</p>
+        <p class="status-note">The committed total includes a conditional $150,000 foundation pledge. The $150,000 in donor contributions needed to secure it is still to be raised and is not included.</p>
         <a class="button" href="#get-involved">Support the project <span aria-hidden="true">↗</span></a>
       </div>
       <div class="status-construction">
@@ -30,9 +30,9 @@ const updated = new Date(`${status.updated}T12:00:00Z`).toLocaleDateString('en-U
     <aside class="status-match" aria-labelledby="status-match-title">
       <div>
         <p class="eyebrow">Matching opportunity</p>
-        <h3 id="status-match-title">Your $150,000 gift can unlock $150,000 more.</h3>
-        <p>A foundation has pledged $150,000 if a donor contributes $150,000, bringing the combined gift to <strong>$300,000</strong> for the Recreation & Early Learning Center.</p>
-        <p class="status-note">The foundation’s pledge is already counted in the {millions(status.committed)} committed total; the donor gift would add $150,000 to that total.</p>
+        <h3 id="status-match-title">Your gift can help unlock $150,000 more.</h3>
+        <p>A foundation has pledged $150,000 if donors together contribute $150,000, bringing the combined contributions to <strong>$300,000</strong> for the Recreation & Early Learning Center.</p>
+        <p class="status-note">The foundation’s pledge is already counted in the {millions(status.committed)} committed total; the matching donor contributions would add $150,000 to that total.</p>
       </div>
       <a class="button" href={`mailto:${site.email}?subject=150%2C000%20Matching%20Gift%20Opportunity`}>Ask about the matching gift <span aria-hidden="true">↗</span></a>
     </aside>
