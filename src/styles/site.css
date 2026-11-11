@@ -90,7 +90,7 @@ blockquote p:first-child { color: var(--ink); font: 500 clamp(1.7rem, 2.8vw, 2.5
 blockquote p:last-child:not(:first-child) { color: #6c7d85; font-size: .8125rem; margin-top: 1.4rem; }
 .button-section { padding-block: 2.2rem; background: var(--muted); }
 .button-section .section-action { text-align: center; margin: 0; }
-.page-home .page-heading + .button-section { display: none; }
+.page-home > .button-section { display: none; }
 .section-action { margin-top: 2rem; margin-bottom: 0; }
 .statement-section { padding-block: 3.5rem; }
 .statement-section h2 { color: white; text-align: center; max-width: 650px; margin: 0 auto; text-wrap: balance; }

@@ -1,0 +1,17 @@
+{
+  "updated": "2026-11-10",
+  "committed": 5160000,
+  "goal": 6500000,
+  "construction": "Excavation is complete. Next up: compacted foundation backfill, footing forms, and rebar.",
+  "targets": [
+    { "date": "November 25, 2026", "label": "Begin pouring footings" },
+    { "date": "Early January 2027", "label": "Begin steel erection" },
+    { "date": "Early–mid February 2027", "label": "Complete the building shell" }
+  ],
+  "milestones": [
+    { "date": "November 9, 2026", "label": "Excavation completed" },
+    { "date": "September 28, 2026", "label": "MDU and Verizon conduits installed, inspected, and backfilled" },
+    { "date": "September 24, 2026", "label": "DEQ, Sheridan County, WYDOT, and Wyoming Fire Marshal permitting finalized" }
+  ],
+  "fundraiser": { "name": "Blacktooth Bingo", "date": "February 3, 2027", "time": "7 p.m." }
+}
