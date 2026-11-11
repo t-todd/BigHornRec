@@ -1,5 +1,8 @@
 ---
 import Page from '../components/Page.astro';
+import MatchingGift from '../components/MatchingGift.astro';
 import { pages } from '../lib/content';
 ---
-<Page page={pages.corporate} />
+<Page page={pages.corporate}>
+  <div class="container"><MatchingGift heading="h2" /></div>
+</Page>

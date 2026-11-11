@@ -1,0 +1,28 @@
+---
+import status from '../../content/project-status.json';
+import { site } from '../lib/content';
+interface Props { heading?: 'h2' | 'h3'; }
+const { heading: Heading = 'h3' } = Astro.props;
+const millions = (value: number) => `$${Number((value / 1000000).toFixed(2))}M`;
+---
+<aside class="status-match" aria-labelledby="status-match-title">
+      <div>
+        <p class="eyebrow">Matching opportunity</p>
+        <Heading id="status-match-title">Your gift can help unlock $150,000 more.</Heading>
+        <p>A foundation has pledged $150,000 if donors together contribute $150,000, bringing the combined contributions to <strong>$300,000</strong> for the Recreation & Early Learning Center.</p>
+        <p class="status-note">The foundation’s pledge is already counted in the {millions(status.committed)} committed total; the matching donor contributions would add $150,000 to that total.</p>
+      </div>
+      <a class="button" href={`mailto:${site.email}?subject=150%2C000%20Matching%20Gift%20Opportunity`}>Ask about the matching gift <span aria-hidden="true">↗</span></a>
+    </aside>
+<style>
+.status-match { display: flex; align-items: center; gap: 2.5rem; margin-top: 2.5rem; padding: 2.5rem; background: #fff5e4; border-left: 4px solid var(--gold); }
+.status-match > div { flex: 1; min-width: 0; }
+.status-match .eyebrow { color: var(--maroon); margin-bottom: .5rem; }
+.status-match :is(h2, h3) { margin: 0 0 1rem; font-size: 2.2rem; }
+.status-match p:last-child { margin-bottom: 0; }
+.status-match .button { flex-shrink: 0; }
+.status-note { font-size: .8125rem; }
+@media (max-width: 760px) {
+.status-match { flex-direction: column; align-items: flex-start; padding: 1.5rem; gap: 1.5rem; }
+}
+</style>
